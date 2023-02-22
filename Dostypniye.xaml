@@ -1,0 +1,30 @@
+﻿<Window x:Class="SalonSaxap.Dostypniye"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalonSaxap"
+        mc:Ignorable="d"
+        Title="Dostypniye" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\айгуль\source\repos\SalonSaxap\Resources\backgroundShop.jpg" />
+
+        </Grid.Background>
+        <DataGrid x:Name="DGridUslugi" Height="305"  AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="DGridUslugi_SelectionChanged_1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Услуга" Binding="{Binding Name}" Width="*"></DataGridTextColumn>
+                <DataGridTemplateColumn Width="auto">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button  Content="Записаться"  Click="BtnRez_Click">
+                        </Button>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+
+</Window>
